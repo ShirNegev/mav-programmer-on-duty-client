@@ -1,0 +1,26 @@
+<div>
+  <mat-form-field class="gap">
+    <mat-label>Choose a min date</mat-label>
+    <input matInput [matDatepicker]="minPicker" [formControl]="minDate">
+    <mat-datepicker-toggle matSuffix [for]="minPicker"></mat-datepicker-toggle>
+    <mat-datepicker #minPicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field class="gap">
+    <mat-label>Choose a max date</mat-label>
+    <input matInput [matDatepicker]="maxPicker" [formControl]="maxDate" [min]="minDate.value">
+    <mat-datepicker-toggle matSuffix [for]="maxPicker"></mat-datepicker-toggle>
+    <mat-datepicker #maxPicker></mat-datepicker>
+  </mat-form-field>
+
+  <button mat-raised-button color="accent" (click)="onClick()">show</button>
+</div>
+
+<mat-grid-list cols="7" dir="rtl">
+  <mat-grid-tile
+    *ngFor="let day of days"
+    colspan="1"
+    rowspan="1">
+    <app-calendar-cell [date]="day"></app-calendar-cell>
+  </mat-grid-tile>
+</mat-grid-list>
