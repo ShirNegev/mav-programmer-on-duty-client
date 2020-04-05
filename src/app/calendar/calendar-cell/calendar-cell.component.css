@@ -1,0 +1,20 @@
+mat-card {
+  width: 12.5vh;
+  height: 12.5vh;
+}
+
+mat-card-header {
+  background-color: #ff4081;
+  color: white;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.weekend {
+  background-color: #ff7aa7;
+}
+
+mat-card-title {
+  padding-top: 1vh;
+}

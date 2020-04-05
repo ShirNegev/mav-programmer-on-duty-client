@@ -1,0 +1,10 @@
+.app {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  direction: rtl;
+}
+
+.logo {
+  width: 20%;
+}
