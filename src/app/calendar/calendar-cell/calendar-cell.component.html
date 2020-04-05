@@ -1,5 +1,5 @@
-<mat-card *ngIf="date">
-  <mat-card-header mat-card-image>
+<mat-card *ngIf="date" >
+  <mat-card-header mat-card-image [ngClass]="dayClass">
     <mat-card-title>
       <div>{{dateText()}}</div>
       <div>{{dayText()}}</div>

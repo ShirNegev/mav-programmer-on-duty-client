@@ -11,6 +11,10 @@ mat-card-header {
   flex-direction: column;
 }
 
+.weekend {
+  background-color: #ff7aa7;
+}
+
 mat-card-title {
   padding-top: 1vh;
 }

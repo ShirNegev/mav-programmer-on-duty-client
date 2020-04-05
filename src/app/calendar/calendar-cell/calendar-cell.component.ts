@@ -18,12 +18,16 @@ const DAYS = [
 export class CalendarCellComponent implements OnInit {
 
   @Input() date: Date;
+  dayClass = '';
 
 
   constructor() {
   }
 
   ngOnInit() {
+    if (this.date.getDay() === 5 || this.date.getDay() === 6) {
+      this.dayClass = 'weekend';
+    }
   }
 
   dateText() {
